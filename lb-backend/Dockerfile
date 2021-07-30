@@ -11,6 +11,6 @@ RUN pip3 install -r requirements.txt
 
 COPY . /app
 
-ENTRYPOINT [ "python3" ]
+ENV FLASK_APP=app
 
-CMD [ "app.py" ]
+CMD [ "python3", "-m", "flask", "run" ]
